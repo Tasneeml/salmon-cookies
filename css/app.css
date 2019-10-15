@@ -1,6 +1,6 @@
 body{
-    color: black;
-    background-color: blueviolet;
+    color: rgb(190, 199, 62);
+    background-color: rgb(184, 202, 79);
     background-image: url('https://cdn.jamieoliver.com/home/wp-content/uploads/features-import/2016/09/salmon_featured-1024x683.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,22 +8,24 @@ body{
     font-size: x-large;
   }
   h1{
-    color: darkred;
+    color: rgb(156, 177, 47);
     text-align: center;
-    font-style: italic;
+    font-style:bold;
   }
   table{
     font: x-large;
-    font-weight: 600;
-    border: 2px solid black;
+    font-weight: 400;
+    border: 2px solid rgb(207, 166, 166);
     width: 100%;
     color: black;
   }
   th{
+    background-color: rgb(68, 67, 65);
     height: 50px;
-    border-bottom: 1px solid #ddd;
-    border-bottom: 1px solid rgb(236, 8, 8);
+    border-bottom: 1px solid rgb(15, 11, 11);
+    border-bottom: 1px solid rgb(194, 207, 76);
   }
   td{
-    border-bottom: 1px solid rgb(236, 8, 8);
+    background-color: rgb(94, 99, 98);
+    border-bottom: 1px solid rgb(14, 5, 5);
   }
