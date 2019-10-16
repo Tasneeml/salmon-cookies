@@ -1,5 +1,5 @@
 body{
-    color: rgb(190, 199, 62);
+    color: rgb(43, 44, 20);
     background-color: rgb(184, 202, 79);
     background-image: url('https://cdn.jamieoliver.com/home/wp-content/uploads/features-import/2016/09/salmon_featured-1024x683.jpg');
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@ body{
     font-size: x-large;
   }
   h1{
-    color: rgb(156, 177, 47);
+    color: black;
     text-align: center;
     font-style:bold;
   }
