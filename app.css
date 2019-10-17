@@ -1,0 +1,39 @@
+h1{
+    background-color: rgb(207, 125, 187); 
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgb(189, 108, 178);
+    border-style: solid;
+  border-width: 5px;
+    
+    
+    text-align: center;
+    text-decoration: underline;
+    border: 3px solid rgb(34, 6, 32);
+    
+    
+}
+    body {
+    background-image: url("http://s1.bwallpapers.com/wallpapers/2014/02/07/cookies-backgrounds_092424335.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgb(202, 106, 178);
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    border-style: solid;
+  border-width: 10px;
+    text-decoration: underline;
+    font-family: "Times New Roman", Times, serif;  
+    font-style: italic;
+    font-size: 30px;
+    font: bold;
+    border-style: dotted;
+
+}
+footer{
+background-color:yellow ;
+color: black;
+border-style: solid;
+  border-width: 10px;
+}
