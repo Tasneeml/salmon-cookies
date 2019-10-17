@@ -1,31 +1,46 @@
 body{
-    color: rgb(43, 44, 20);
+    color: black;
     background-color: rgb(184, 202, 79);
-    background-image: url('https://cdn.jamieoliver.com/home/wp-content/uploads/features-import/2016/09/salmon_featured-1024x683.jpg');
+    background-image: url("https://www.ikea.com/images/food-at-ikea-54750209befe457452d329eb50b45d20.jpg?f=xxxl");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
     background-size: cover;
     font-size: x-large;
   }
   h1{
-    color: black;
+    color:rgb(8, 7, 7);
     text-align: center;
+    font-family: "Times New Roman", Times, serif;
     font-style:bold;
   }
   table{
     font: x-large;
     font-weight: 400;
     border: 2px solid rgb(207, 166, 166);
+    font-family: "Times New Roman", Times, serif;
     width: 100%;
-    color: black;
+    color:black;
+    text-align: left;
   }
   th{
     background-color: rgb(68, 67, 65);
     height: 50px;
     border-bottom: 1px solid rgb(15, 11, 11);
+    font-family: "Times New Roman", Times, serif;
     border-bottom: 1px solid rgb(194, 207, 76);
+    border-bottom: 1px solid #ddd;
   }
-  td{
-    background-color: rgb(94, 99, 98);
-    border-bottom: 1px solid rgb(14, 5, 5);
+  tr:hover {background-color: lightcoral;
+    border-bottom: 1px solid #ddd;
+  }
+  footer{
+    color: black;
+    background-color: rgb(184, 202, 79);
+    font-family: "Times New Roman", Times, serif;
+    background-attachment: fixed;
+    font-size: x-large;
+  
+  }
+
   }

@@ -87,11 +87,11 @@ function makeFooterRow() {
   tdElement.textContent = bigStupidTotal;
   tableRow.appendChild(tdElement);
 }
-new Store('Settle', 23, 65, 6.3); //eslint-disable-line
-new Store('Tokyo', 11, 38, 3.7); //eslint-disable-line
-new Store('Dubai', 3, 24, 1.2); //eslint-disable-line
-new Store('Paris', 20, 38, 2.3); //eslint-disable-line
-new Store('Lima', 2, 16, 4.6); //eslint-disable-line
+new Store('Settle', 23, 65, 6.3);
+new Store('Tokyo', 11, 38, 3.7); 
+new Store('Dubai', 3, 24, 1.2); 
+new Store('Paris', 20, 38, 2.3); 
+new Store('Lima', 2, 16, 4.6); 
 function dataInput(event) {
   event.preventDefault();
   console.log('Submit button was clicked');
