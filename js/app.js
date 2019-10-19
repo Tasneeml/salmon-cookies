@@ -1,7 +1,7 @@
 
 'use strict';
 var hours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm'];
-var storeLocations = [];
+var locations = [];
 var salmonTable = document.getElementById('salmonTable');
 var salesInput = document.getElementById('salesInput');
 function Store(name, Min, Max, Avg) {
@@ -10,26 +10,26 @@ function Store(name, Min, Max, Avg) {
   this.Max = Max;
   this.Avg = Avg;
   this.averageCustomersPerHour = [];
-  this.averageCookiesPerHour = [];
-  this.totalCookiesPerDay = 0;
+  this.averagePerHour = [];
+  this.totalPerDay = 0;
   this.numOfCustomersPerHour();
   this.cookiesPerCustomer();
-  storeLocations.push(this);
+  locations.push(this);
 }
 Store.prototype.render = function() {
-  var trRowName = document.createElement('tr');
-  var tdStore = document.createElement('td');
-  tdStore.textContent = this.name;
-  trRowName.appendChild(tdStore);
-  for (var i = 0; i < this.averageCookiesPerHour.length; i++) {
+  var tr = document.createElement('tr');
+  var td = document.createElement('td');
+  td.textContent = this.name;
+  tr.appendChild(td);
+  for (var i = 0; i < this.averagePerHour.length; i++) {
     var tdCell = document.createElement('td');
-    tdCell.textContent = this.averageCookiesPerHour[i];
-    trRowName.appendChild(tdCell);
+    tdCell.textContent = this.averagePerHour[i];
+    tr.appendChild(tdCell);
   };
   var tdTotal = document.createElement('td');
-  tdTotal.textContent = this.totalCookiesPerDay;
-  trRowName.appendChild(tdTotal);
-  salmonTable.appendChild(trRowName);
+  tdTotal.textContent = this.totalPerDay;
+  tr.appendChild(tdTotal);
+  salmonTable.appendChild(tr);
 };
 Store.prototype.numOfCustomersPerHour = function() {
   for (var i = 0; i < hours.length; i++) {
@@ -40,52 +40,51 @@ Store.prototype.numOfCustomersPerHour = function() {
 Store.prototype.cookiesPerCustomer = function() {
   for (var i = 0; i < hours.length; i++) {
     var singleHourCookies = Math.ceil(this.averageCustomersPerHour[i] * this.Avg);
-    this.averageCookiesPerHour.push(singleHourCookies);
-    this.totalCookiesPerDay += singleHourCookies;
+    this.averagePerHour.push(singleHourCookies);
+    this.totalPerDay += singleHourCookies;
   }
-};
-//Table creation functions
+}; 
 function makeHeaderRow() { 
   var tableRow = document.createElement('tr');
-  var thElement = document.createElement('th');
-  thElement.textContent = null;
+  var th = document.createElement('th');
+  th.textContent = null;
   salmonTable.appendChild(tableRow);
-  tableRow.appendChild(thElement);
+  tableRow.appendChild(th);
   for (var i = 0; i < hours.length; i++) {
-    thElement = document.createElement('th');
-    thElement.textContent = hours[i];
-    tableRow.appendChild(thElement);
+    th = document.createElement('th');
+    th.textContent = hours[i];
+    tableRow.appendChild(th);
     
   }
-  thElement = document.createElement('th');
-  thElement.textContent = 'Location Total';
-  tableRow.appendChild(thElement);
+  th = document.createElement('th');
+  th.textContent = 'Location Total';
+  tableRow.appendChild(th);
   console.log(salmonTable);
   salmonTable.appendChild(tableRow);
 };
 function renderAllStores() {
-  for (var i = 0; i < storeLocations.length; i++) {
-    storeLocations[i].render();
+  for (var i = 0; i < locations.length; i++) {
+    locations[i].render();
   }
 };
 function makeFooterRow() { 
-  var tableRow = document.createElement('tr');
-  tableRow.textContent = 'Totals';
-  salmonTable.appendChild(tableRow);
+  var row1 = document.createElement('tr');
+  row1.textContent = 'Totals';
+  salmonTable.appendChild(row1);
   var bigStupidTotal = 0;
   for (var i = 0; i < hours.length; i++) {
     var hourlyTotal = 0;
-    for (var j = 0; j < storeLocations.length; j++) {
-      hourlyTotal = hourlyTotal + storeLocations[j].averageCookiesPerHour[i];
-      bigStupidTotal += storeLocations[j].averageCookiesPerHour[i];
+    for (var j = 0; j < locations.length; j++) {
+      hourlyTotal = hourlyTotal + locations[j].averageCookiesPerHour[i];
+      bigStupidTotal += locations[j].averageCookiesPerHour[i];
     }
-    var tdElement = document.createElement('td');
-    tdElement.textContent = hourlyTotal;
-    tableRow.appendChild(tdElement);
+    var td = document.createElement('td');
+    td.textContent = hourlyTotal;
+    row1.appendChild(td);
   }
-  tdElement = document.createElement('td');
-  tdElement.textContent = bigStupidTotal;
-  tableRow.appendChild(tdElement);
+  td = document.createElement('td');
+  td.textContent = bigStupidTotal;
+  row1.appendChild(td);
 }
 new Store('Settle', 23, 65, 6.3);
 new Store('Tokyo', 11, 38, 3.7); 
@@ -103,7 +102,7 @@ function dataInput(event) {
   var Max = parseInt(event.target.Max.value);
   var Avg = parseFloat(event.target.Avg.value);
     salmonTable.textContent = null;
-  var storeExist = doesStoreExist(storeLocations, name);
+  var storeExist = doesStoreExist(locations, name);
   var index;
   function doesStoreExist(x,y) {
     for (var i = 0; i < x.length; i++) {
@@ -114,18 +113,18 @@ function dataInput(event) {
     }
     return false;
   }
-  doesStoreExist(storeLocations, name);
-  console.log(doesStoreExist(storeLocations, name));
+  doesStoreExist(locations, name);
+  console.log(doesStoreExist(locations, name));
   if (storeExist === true) {
     console.log('did find name');
-    storeLocations[index].Min = parseInt(Min);
-    storeLocations[index].Max = parseInt(Max);
-    storeLocations[index].Avg = parseFloat(Avg);
-    storeLocations[index].averageCustomersPerHour = [];
-    storeLocations[index].averageCookiesPerHour = [];
-    storeLocations[index].totalCookiesPerDay = 0;
-    storeLocations[index].numOfCustomersPerHour();
-    storeLocations[index].cookiesPerCustomer();
+    locations[index].Min = parseInt(Min);
+    locations[index].Max = parseInt(Max);
+    locations[index].Avg = parseFloat(Avg);
+    locations[index].averageCustomersPerHour = [];
+    locations[index].averageCookiesPerHour = [];
+    locations[index].totalCookiesPerDay = 0;
+    locations[index].numOfCustomersPerHour();
+    locations[index].cookiesPerCustomer();
   }
   if (storeExist === false) {
     var newStore = new Store(name, Min, Max, Avg);

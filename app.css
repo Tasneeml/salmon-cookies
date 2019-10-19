@@ -9,13 +9,14 @@ body{
     font-size: x-large;
   }
   h1{
-    color:rgb(8, 7, 7);
+    color:white;
+    background-color: rgb(51, 71, 31);
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     font-style:bold;
   }
   table{
-    font: x-large;
+    font: x-large;ss
     font-weight: 400;
     border: 2px solid rgb(207, 166, 166);
     font-family: "Times New Roman", Times, serif;
@@ -31,7 +32,7 @@ body{
     border-bottom: 1px solid rgb(194, 207, 76);
     border-bottom: 1px solid #ddd;
   }
-  tr:hover {background-color: lightcoral;
+  tr:hover {background-color: khaki;
     border-bottom: 1px solid #ddd;
   }
   footer{
