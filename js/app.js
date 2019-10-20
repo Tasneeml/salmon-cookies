@@ -75,8 +75,9 @@ function makeFooterRow() {
   for (var i = 0; i < hours.length; i++) {
     var hourlyTotal = 0;
     for (var j = 0; j < locations.length; j++) {
-      hourlyTotal = hourlyTotal + locations[j].averageCookiesPerHour[i];
-      bigStupidTotal += locations[j].averageCookiesPerHour[i];
+      // console.log('locations',locations[j].averagePerHour);
+      hourlyTotal = hourlyTotal + locations[j].averagePerHour[i];
+      bigStupidTotal +=  hourlyTotal;                   /*locations[j].averagePerHour[j];*/
     }
     var td = document.createElement('td');
     td.textContent = hourlyTotal;
@@ -121,8 +122,8 @@ function dataInput(event) {
     locations[index].Max = parseInt(Max);
     locations[index].Avg = parseFloat(Avg);
     locations[index].averageCustomersPerHour = [];
-    locations[index].averageCookiesPerHour = [];
-    locations[index].totalCookiesPerDay = 0;
+    locations[index].averagePerHour = [];
+    locations[index].totalPerDay = 0;
     locations[index].numOfCustomersPerHour();
     locations[index].cookiesPerCustomer();
   }
