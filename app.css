@@ -1,39 +1,36 @@
 h1{
-    background-color: rgb(207, 125, 187); 
-    background-attachment: fixed;
-    background-position: center;
-    background-color: rgb(189, 108, 178);
-    border-style: solid;
-  border-width: 5px;
-    
-    
-    text-align: center;
-    text-decoration: underline;
-    border: 3px solid rgb(34, 6, 32);
-    
-    
-}
-    body {
-    background-image: url("http://s1.bwallpapers.com/wallpapers/2014/02/07/cookies-backgrounds_092424335.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-color: rgb(202, 106, 178);
-    position: absolute;
-    top: 80px;
-    text-align: center;
-    border-style: solid;
-  border-width: 10px;
-    text-decoration: underline;
-    font-family: "Times New Roman", Times, serif;  
-    font-style: italic;
+    background-color: black;
+    color: rgb(235, 173, 173);
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
     font-size: 30px;
-    font: bold;
-    border-style: dotted;
+  }
 
+ul{
+  background-color: palevioletred;
+  color: black;
+  text-align: center;   
+  border-style: dotted;
+  font-size: large;
+   padding: 20px 0;
+  font-size: 30px;
 }
+
+    body {
+    background-image: url("https://media.istockphoto.com/vectors/unicorn-background-with-rainbow-mesh-holographic-unicorn-background-vector-id947347846?k=6&m=947347846&s=612x612&w=0&h=Sgfqa1M1ugjD44ATLa-3FZaU52Wi7BFDHOI-x1VzJdA=");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    background-size: cover; 
+    text-align: center;
+    }
+
+
 footer{
-background-color:yellow ;
-color: black;
-border-style: solid;
-  border-width: 10px;
+
+background-color:purple ;
+border-style: groove;
+  border-color: coral;
 }

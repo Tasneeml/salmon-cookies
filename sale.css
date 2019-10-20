@@ -1,0 +1,31 @@
+h1{
+    background-color:lightseagreen;
+    color: rgb(16, 46, 65);
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
+    font-size: 30px;
+
+}
+body{
+    color: seashell;
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
+    font-size: 30px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
+}
+table, th, td {
+    border: 1px solid wheat;
+    text-align: left;
+    padding: 15px;
+  }
+  tr:hover {background-color: darksalmon;
+}
+  footer{
+background-color:rgb(19, 139, 155) ;
+border-style: groove;
+  border-color: rgb(5, 5, 32)1, 1, 66);
+  }

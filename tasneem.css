@@ -1,0 +1,35 @@
+h1 {
+    background-color: black;
+    color: blue;
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
+    font-size: 30px;
+   
+  }
+  
+  h2 {
+      background-color: royalblue;
+      color: lightyellow;
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
+    font-size: 30px;
+    
+  }
+
+
+
+
+body{
+    background-color: mediumblue;
+    color: mediumaquamarine;
+    text-align: center;  
+    border-style: dashed; 
+    font-size: large;
+    padding: 20px 0;
+    font-size: 30px;
+    
+}
