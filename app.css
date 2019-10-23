@@ -26,6 +26,14 @@ ul{
     background-size: cover; 
     text-align: center;
     }
+    h2{
+      background-color: coral;
+      color:black;
+      background-position: center;
+      font-size: large;
+      padding: 20px 0;
+     font-size: 30px;
+    }
 
 
 footer{
